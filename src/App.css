@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+
+.copiedMsg{
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid rgba(232, 84, 44, 0.37);
+  border-radius: 5px;
+  word-break: normal;
+  white-space: nowrap;
+  z-index: 1;
+  background: #f1f1f1;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: normal;
+}

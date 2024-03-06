@@ -1,0 +1,372 @@
+.dashboard{
+    position: relative;
+}
+
+.dashboard .searchBarBox{
+    position: relative;
+    width: 1120px;
+    margin: 625px auto 40px;
+}
+
+
+.miniChatBox {
+  width: 350px;
+  height: 450px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 2;
+}
+
+.chatBox {
+  width: 350px;
+  height: 450px;
+  flex-shrink: 0;
+  border: 1px solid rgba(232, 84, 44, 0.28);
+  background: #fff;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 16px;
+  position: relative;
+  z-index: 1;
+}
+.miniChatBox .chatBoxHeader {
+  margin: -10px -16px;
+}
+.chatBoxHeader {
+  background: linear-gradient( 90deg, #e8542c 1.15%, rgba(232, 84, 44, 0.75) 99.9% );
+  margin: -10px -10px;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatBoxHeader .chatBoxTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row;
+  gap: 10px;
+}
+.chatBoxHeader .chatBoxTitle .icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: #fff;
+}
+.chatBoxHeader .chatBoxTitle .icon img {
+  display: block;
+  margin-left: 7px;
+  margin-top: 7px;
+}
+
+.chatBoxHeader .chatBoxTitle .label h1 {
+  font-size: 16px;
+}
+
+.chatBoxHeader .chatBoxTitle .label h1,
+.chatBoxHeader .chatBoxTitle .label h2 {
+  color: #fff;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  margin: 0;
+  padding: 0;
+}
+
+.chatBoxHeader .chatBoxTitle .label h2 {
+  font-size: 12px;
+}
+
+.chatBoxActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.chatBoxActions .btnicon {
+  width: 16px;
+  height: 16px;
+}
+.chatBoxActions .btnexpand {
+  background: url("./../../../public/assets/open-external-link-icon.png")
+    left top no-repeat;
+}
+.chatBoxActions .btncollapse {
+  background: url("./../../../public/assets/Vector.png") left bottom
+    no-repeat;
+  height: 8px;
+}
+.chatBoxActions .btnexpand,
+.chatBoxActions .btncollapse {
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.chatIconBox {
+  width: 110px;
+  height: 110px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 1;
+}
+
+.chatIconBox .hoverlabel {
+  display: none;
+  position: absolute;
+  left: -120px;
+  top: 0;
+  color: #e8602c;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.7px;
+  border-radius: 6px 6px 0px 6px;
+  border: 1px solid #e8602c;
+  background: #fff;
+  padding: 5px 5px 7px 7px;
+}
+
+.chatIconBox:hover .hoverlabel {
+  display: block;
+}
+
+.btnchat {
+  background: url("./../../../public/assets/chatIcon.png") 0px 0px no-repeat;
+  width: 110px;
+  height: 110px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.chatBoxBody {
+  margin-top: 20px;
+  height: 310px;
+  overflow: auto;
+  padding-right: 10px;
+}
+.chatBoxBody .chatBoxBodyMessage {
+  border-radius: 8px 8px 8px 0px;
+  border: 1px solid rgba(232, 84, 44, 0.37);
+  padding: 10px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.chatBoxBody .chatBoxBodyMessage .time,
+.chat-msg .time {
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  color: #848484;
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+}
+.chatBoxBody .chatBoxBodyMessage h1 {
+  color: #000;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  margin: 0;
+  padding: 0;
+}
+
+/* .botRows{} */
+.chatRowto {
+  margin-bottom: 30px;
+}
+.chatRowto .chat-msg {
+  position: relative;
+  border-radius: 8px 8px 0px 8px;
+  background: rgba(232, 84, 44, 0.06);
+  color: #000;
+  text-align: right;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  padding: 5px 20px;
+}
+.chatRowfrom .chat-msg .actionIcons{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.amplify-flex.amplify-collection{
+  width: 100%;
+}
+.amplify-grid{
+  display: flex;
+}
+
+.bars .amplify-flex .amplify-grid.amplify-collection-items{
+  display: flex;
+  justify-content: space-between !important;
+}
+
+.chatRowfrom .chat-msg .actionIcons a{
+  padding: 0;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    opacity: 0.5;
+    cursor: default;
+}
+
+.chatRowfrom .chat-msg .actionIcons a:last-child {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.miniChatBox .chatRowfrom .chat-msg .actionIcons {
+  position: relative;
+  margin: 10px 0 10px 0;
+  display: block;
+  top: auto;
+  right: auto;
+}
+.miniChatBox .chatRowfrom .chat-msg .actionIcons .saperator{
+  height: 20px;
+  margin: 2px 10px;
+  display: inline-block;
+}
+
+.chatRowfrom .chat-msg .actionIcons .saperator{
+  background: #E8542C;
+    width: 1px;
+    height: auto;
+    margin: 2px 0;
+}
+
+.chatRowfrom {
+  margin-bottom: 30px;
+  display: inline-flex;
+  padding: 0px 12px 15px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.chatRowfrom .chatBoxBodyMessage {
+  margin-bottom: 10px;
+}
+.chatRowfrom .chat-msg {
+  color: #000;
+  position: relative;
+  font-family: Lato;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.75px;
+  border-radius: 8px 8px 8px 0px;
+  border: 1px solid rgba(232, 84, 44, 0.37);
+  padding: 10px;
+  white-space: pre-line;
+}
+.chatRowfrom .chatimage {
+  width: 185px;
+  margin-top: 10px;
+  position: relative;
+}
+.chatRowfrom .chatimage img {
+  width: 184px;
+  height: 125px;
+}
+.chatRowfrom .chatimage a{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.chatRowfrom .chatimage a img{
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.chatBoxFooter {
+  margin-top: 15px;
+}
+
+.chatBoxFooter .chatBoxInput {
+  border: 1px solid rgba(232, 84, 44, 0.89);
+  background: #fff;
+  position: relative;
+}
+.chatBoxFooter .chatBoxInput input {
+  width: 100%;
+  border: 0;
+  padding: 11px 60px 11px 10px;
+  box-sizing: border-box;
+  margin: 0;
+  color: #000; outline: none;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.7px;
+}
+.chatBoxFooter .chatBoxInput button {
+  background: url("./../../../public/assets/send-icon.png") no-repeat 0 3px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.chatBoxFooter .chatBoxInput .spacer {
+  background: #e8542c;
+  width: 2px;
+  height: 30px;
+  position: absolute;
+  right: 50px;
+  top: 5px;
+}
+
+
+.responseTitle{
+  display: inline-flex;
+padding: 8px 19px 8px 10px;
+margin-bottom: 20px;
+align-items: center;
+gap: 10px;
+color: #000;
+font-family: Lato;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.75px;
+  border-radius: 8px 8px 8px 0px;
+  border: 1px solid rgba(232, 84, 44, 0.37);
+}
