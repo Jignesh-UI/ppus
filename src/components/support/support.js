@@ -132,25 +132,27 @@ const SupportComponent = () => {
                           </div>
                           {item?.responseData?.["text data"]}
 
-                          <div className="chatimage">
-                            <a  href="#" onClick={(e) => {e.preventDefault(); }}>
-                              <img
-                                src="./assets/download.png"
-                                onClick={(e) =>
-                                  download(
-                                    e,
-                                    item?.responseData?.["images_content_list"]
-                                  )
-                                }
-                                alt="Download"
-                              />
-                            </a>
+                          <div className="chatImageBox">
 
-                            <img
-                              src={item?.responseData?.["images_content_list"]}
-                              alt=""
-                            />
+                            {item?.responseData?.["images_content_list"]?.map((item,index)=>(
+
+                              <div className="chatimage" key={index}>
+                                  <a href="#" onClick={(e) => {e.preventDefault(); }}>
+                                    <img
+                                      src="./assets/download.png"
+                                      onClick={(e) => download( e, item ) }
+                                      alt="Download"
+                                    />
+                                  </a>
+                                <img src={item} alt="" />
+                              </div>
+
+                            ))}
+
+
+                            
                           </div>
+
                           <div className="time">12:05 PM</div>
                         </div>
                       </div>

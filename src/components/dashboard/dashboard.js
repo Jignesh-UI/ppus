@@ -160,23 +160,22 @@ const DashboardComponent = () => {
                             {showMessage && <p className="copiedMsg">Content Copied to Clipboard!</p>}
 
                           </div>
-                          <div className="chatimage">
-                            <a  href="#" onClick={(e) => {e.preventDefault(); }}>
-                              <img
-                                src="assets/download.png"
-                                alt="Download"
-                                onClick={(e) =>
-                                  download(
-                                    e,
-                                    item?.responseData?.["images_content_list"]
-                                  )
-                                }
-                              />
-                            </a>
-                            <img
-                              src={item?.responseData?.["images_content_list"]}
-                              alt=""
-                            />
+
+                          <div className="chatImageBox">
+
+                            {item?.responseData?.["images_content_list"]?.map((item,index)=>(
+
+                              <div className="chatimage" key={index}>
+                                  <a href="#" onClick={(e) => {e.preventDefault(); }}>
+                                    <img
+                                      src="./assets/download.png"
+                                      onClick={(e) => download( e, item ) }
+                                      alt="Download"
+                                    />
+                                  </a>
+                                <img src={item} alt="" />
+                              </div>
+                            ))}
                           </div>
                           <div className="time">12:05 PM</div>
                         </div>

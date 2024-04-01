@@ -256,6 +256,12 @@
   display: inline-block;
 }
 
+.miniChatBox .chatRowfrom .chatimage{ width: 90px;}
+.miniChatBox .chatRowfrom .chatimage img{width: 90px; height: 60px;}
+.miniChatBox .chatImageBox{gap: 5px;}
+.miniChatBox .chatRowfrom .chatimage a{right: 5px; top: 5px;}
+.miniChatBox .chatRowfrom .chatimage a img{width: 18px; height: 18px;}
+
 .chatRowfrom .chat-msg .actionIcons .saperator{
   background: #E8542C;
     width: 1px;
